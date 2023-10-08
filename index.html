@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise Generator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 200px auto;
+        }
+
+        h1 {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000; /* Text color */
+            padding: 20px; /* Padding around the header content */
+            font-size: 24px; /* Font size */
+            text-align: center; /* Center-align text */
+            border-radius: 8px; /* Rounded corners */
+            z-index: 100; /* Ensure it's above other elements */ 
+            font-weight: bold;
+            font-family: Courier New;
+        }
+        .container {
+            background: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            box-shadow: 0 7px 15px -2px
+            rgba(0,0,0,.2), 0 2px 4px
+            rgba(0,0,0,.3);
+        }
+        textarea {
+            height: 100px;
+            max-height: 100px;
+            width: 100%;
+            max-width: 280px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-family: Courier New;
+            /* font-weight: bold; */
+            background: #fff;
+            box-shadow: inset 0 2px 3px 1px
+            rgba(0,0,0,.2);
+            border-width: 0;
+            font-size: 15px;
+        }
+        input {
+            box-shadow: inset 0 2px 3px 1px
+            rgba(0,0,0,.2);
+            padding: 5px;
+            border: 0;
+            margin-bottom: 10px;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+        .btn button {
+            width: 100%;
+            padding: 5px;
+            border-radius: 3px;
+            border: 0;
+            color: #fff;
+            font-weight: bold;
+            font-family: sans-serif;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 2px 3px 
+            rgba(0,0,0,.2);
+        }
+        #generateExerciseButton {
+            background: #1c1c1c;
+            margin-right: 2px;
+        }
+        #copy {
+            background: #70a1ff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Exercise Generator</h1>
+
+    <div class="container">   
+        <textarea id="exerciseResults" rows="5" cols="30"></textarea>
+        <input type="text" value=" " id="muscleGroupInput" placeholder="Enter a muscle group e.g arms,legs,back">
+        <div class="btn">
+            <button id="generateExerciseButton">Generate</button>
+            <button id="copy">Copy</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
